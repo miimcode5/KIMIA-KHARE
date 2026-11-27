@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'MyBabyChubby';
+  src: url('./assets/fonts/mybaby-chubby.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Paytakht';
+  src: url('./assets/fonts/Paytakht.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qafashat';
+  src: url('./assets/fonts/Qafashat-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yadgar';
+  src: url('./assets/fonts/Yadgar.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --site-display-font: 'MyBabyChubby';
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Vazirmatn', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+.font-display {
+  font-family: var(--site-display-font), 'MyBabyChubby', 'Paytakht', 'Lalezar', 'Vazirmatn', sans-serif;
+}
+
+.font-mybaby {
+  font-family: 'MyBabyChubby', 'Lalezar', 'Vazirmatn', sans-serif;
+}
+
+.font-paytakht {
+  font-family: 'Paytakht', 'Vazirmatn', sans-serif;
+}
+
+.font-qafashat {
+  font-family: 'Qafashat', 'Lalezar', 'Vazirmatn', sans-serif;
+}
+
+.font-yadgar {
+  font-family: 'Yadgar', 'Vazirmatn', sans-serif;
+}
+
+/* Custom Animations */
+@keyframes marquee-rtl {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(5deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(14px) rotate(-6deg);
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 94%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+  }
+  25% {
+    transform: scaleY(1.12) scaleX(0.92);
+    opacity: 0.92;
+  }
+  50% {
+    transform: scaleY(0.95) scaleX(1.06);
+    opacity: 1;
+  }
+  75% {
+    transform: scaleY(1.08) scaleX(0.96);
+    opacity: 0.9;
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 5.5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 6.5s ease-in-out infinite;
+}
+
+.animate-scan {
+  animation: scan-line 2.8s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+.animate-flicker {
+  animation: flicker 0.55s ease-in-out infinite;
+}
+
+.comic-shadow {
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.comic-shadow-purple {
+  box-shadow: 6px 6px 0px #a855f7;
+}
+
+.comic-shadow-yellow {
+  box-shadow: 6px 6px 0px #facc15;
+}
+
+.comic-shadow-pink {
+  box-shadow: 6px 6px 0px #ec4899;
+}
+
+.text-stroke-black {
+  -webkit-text-stroke: 2px #000;
+  paint-order: stroke fill;
+}
+
+.text-stroke-sm {
+  -webkit-text-stroke: 1.5px #000;
+  paint-order: stroke fill;
+}
+
+/* Dotted Comic Pattern */
+.bg-comic-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+}
+
+/* Night vision effect */
+.night-vision {
+  filter: sepia(100%) hue-rotate(72deg) saturate(260%) contrast(1.25) brightness(0.95);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0d061c;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a855f7, #ec4899);
+  border-radius: 9999px;
+}
