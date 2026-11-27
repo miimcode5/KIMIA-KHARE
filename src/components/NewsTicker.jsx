@@ -13,15 +13,15 @@ export default function NewsTicker() {
         </div>
         <div className="relative flex-1 overflow-hidden" dir="ltr">
           <motion.div
-            className="flex w-max gap-10 whitespace-nowrap"
+            className="flex w-max whitespace-nowrap"
             animate={{ x: ['0%', '-50%'] }}
-            transition={{ repeat: Infinity, ease: 'linear', duration: 36 }}
+            transition={{ repeat: Infinity, ease: 'linear', duration: 95 }}
           >
             {combined.map((item, index) => (
               <span
                 key={index}
                 dir="rtl"
-                className="font-qafashat inline-flex items-center gap-3 text-base sm:text-lg tracking-tight"
+                className="font-qafashat inline-flex items-center gap-4 pl-10 text-base sm:text-lg tracking-tight"
               >
                 <span>{item}</span>
                 <span className="text-rose-700 font-black">★</span>
